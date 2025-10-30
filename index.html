@@ -365,10 +365,10 @@
                         <span>대기 → 우주 (재방출)</span>
                         <span id="atmToSpace">0</span>
                     </div>
-                    <div class="energy-item balanced">
-                        <span>지구 복사사 에너지</span>
-                        <span id="surfaceTotal" style="color: #FFD700; font-weight: bold;">70 W/m²</span>
-                    </div>
+                                        <div class="energy-item balanced">
+                            <span>지구 복사 에너지</span>
+                            <span id="surfaceTotal" style="color: #FFD700; font-weight: bold;">70</span>
+                        </div>
                     <div class="energy-item balanced">
                         <span>우주로 방출 (총)</span>
                         <span id="toSpace">70</span>
@@ -638,7 +638,7 @@
             document.getElementById('atmAbsorbed').textContent = atmAbsorbed.toFixed(1);
             document.getElementById('atmToSurface').textContent = atmToSurface.toFixed(1);
             document.getElementById('atmToSpace').textContent = atmToSpace.toFixed(1);
-            document.getElementById('surfaceTotal').textContent = surfaceTotal.toFixed(1) + ' W/m²';
+            document.getElementById('surfaceTotal').textContent = surfaceTotal.toFixed(1);
             document.getElementById('toSpace').textContent = toSpace.toFixed(1);
 
             return {
