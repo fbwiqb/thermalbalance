@@ -299,7 +299,7 @@
 
             <div class="control-panel">
                 <div class="control-group">
-                    <label>☀️ 태양 복사 강도</label>
+                    <label>☀️ 태양 복사 에너지 강도</label>
                     <input type="range" id="solarInput" min="50" max="250" value="100" step="1">
                     <div class="slider-value" id="solarValue">100</div>
                     <div class="slider-labels">
@@ -342,32 +342,32 @@
                 <div class="energy-display">
                     <h3>📊 에너지 수치</h3>
                     <div class="energy-item balanced">
-                        <span>태양 입사</span>
+                        <span>태양 복사 에너지 입사</span>
                         <span id="solarIn">100</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>반사</span>
+                        <span>반사 (알베도)</span>
                         <span id="reflected">30</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>지표 흡수 (태양)</span>
+                        <span>지표 흡수 (태양 복사)</span>
                         <span id="surfaceAbsorb">70</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>대기 흡수 (지표)</span>
+                        <span>대기 흡수 (지구 복사)</span>
                         <span id="atmAbsorbed">0</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>대기 → 지표</span>
+                        <span>대기 → 지표 (재방출)</span>
                         <span id="atmToSurface">0</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>대기 → 우주</span>
+                        <span>대기 → 우주 (재방출)</span>
                         <span id="atmToSpace">0</span>
                     </div>
                     <div class="energy-item balanced">
-                        <span>지표 총 에너지</span>
-                        <span id="surfaceTotal" style="color: #FFD700; font-weight: bold;">70</span>
+                        <span>지구 복사사 에너지</span>
+                        <span id="surfaceTotal" style="color: #FFD700; font-weight: bold;">70 W/m²</span>
                     </div>
                     <div class="energy-item balanced">
                         <span>우주로 방출 (총)</span>
@@ -393,7 +393,7 @@
             <div class="modal-body">
                 <div class="help-section">
                     <h3>🌍 프로그램 소개</h3>
-                    <p><strong>지구 시스템 열수지 시뮬레이션</strong>은 태양 에너지가 지구에 들어오고 나가는 과정을 시각적으로 관찰할 수 있는 교육용 프로그램입니다. 온실효과가 있을 때와 없을 때를 비교하고, 각 변수들이 지구의 에너지 평형에 어떤 영향을 미치는지 실시간으로 확인할 수 있습니다.</p>
+                    <p><strong>지구 시스템 열수지 시뮬레이션</strong>은 태양 복사 에너지가 지구에 들어오고 나가는 과정을 시각적으로 관찰할 수 있는 교육용 프로그램입니다. 온실효과가 있을 때와 없을 때를 비교하고, 각 변수들이 지구의 에너지 평형에 어떤 영향을 미치는지 실시간으로 확인할 수 있습니다.</p>
                 </div>
 
                 <div class="help-section">
@@ -401,16 +401,16 @@
                     
                     <p><strong>1. 태양 복사 강도 조절</strong></p>
                     <ul>
-                        <li><strong>☀️ 태양 복사 강도 슬라이더</strong>: 태양으로부터 지구에 도달하는 에너지의 양을 조절합니다</li>
+                        <li><strong>☀️ 태양 복사 강도 슬라이더</strong>: 태양으로부터 지구에 도달하는 태양 복사 에너지의 양을 조절합니다</li>
                         <li>범위: 50~250 (상대값, 100이 기준)</li>
-                        <li>값이 클수록 더 많은 태양 에너지가 지구에 도달합니다</li>
+                        <li>값이 클수록 더 많은 태양 복사 에너지가 지구에 도달합니다</li>
                     </ul>
 
                     <p><strong>2. 지구 반사도 (알베도) 조절</strong></p>
                     <ul>
-                        <li><strong>🌍 지구 반사도 슬라이더</strong>: 지구로 들어온 태양빛 중 반사되어 나가는 비율을 설정합니다</li>
+                        <li><strong>🌍 지구 반사도 슬라이더</strong>: 지구로 들어온 태양 복사 중 반사되어 나가는 비율을 설정합니다</li>
                         <li>범위: 0~100%</li>
-                        <li>반사도가 높을수록 더 많은 빛이 우주로 돌아가고, 지표가 흡수하는 에너지는 줄어듭니다</li>
+                        <li>반사도가 높을수록 더 많은 태양 복사가 우주로 돌아가고, 지표가 흡수하는 에너지는 줄어듭니다</li>
                         <li>예: 눈과 얼음이 많으면 반사도가 높아집니다</li>
                     </ul>
 
@@ -419,7 +419,7 @@
                         <li><strong>🌫️ 대기 두께 슬라이더</strong>: 온실기체의 양을 조절합니다</li>
                         <li>범위: 0~100%</li>
                         <li>0%: 대기가 없는 상태 (온실효과 없음)</li>
-                        <li>값이 클수록 대기가 지표 복사를 더 많이 흡수하고 재방출합니다</li>
+                        <li>값이 클수록 대기가 지구 복사를 더 많이 흡수하고 재방출합니다</li>
                         <li>대기가 두꺼울수록 온실효과가 강해져 지표 에너지가 증가합니다</li>
                     </ul>
 
@@ -437,26 +437,26 @@
                     
                     <p><strong>화살표의 의미:</strong></p>
                     <ul>
-                        <li><strong>노란색 화살표</strong>: 가시광선 (태양빛)</li>
-                        <li><strong>주황빛 화살표 (#FF6666)</strong>: 지표에서 방출되는 적외선 (지표 복사)</li>
-                        <li><strong>빨간색 화살표 (#FF4444)</strong>: 대기에서 방출되는 적외선 (대기 방출)</li>
+                        <li><strong>노란색 화살표</strong>: 태양 복사 에너지</li>
+                        <li><strong>주황빛 화살표 (#FF6666)</strong>: 지표의 지구 복사 (적외선)</li>
+                        <li><strong>빨간색 화살표 (#FF4444)</strong>: 대기의 복사 재방출 (적외선)</li>
                         <li><strong>화살표 두께</strong>: 에너지의 양에 비례 (두꺼울수록 많은 에너지)</li>
-                        <li><strong>화살표 위의 숫자</strong>: 해당 에너지 흐름의 크기</li>
+                        <li><strong>화살표 위의 숫자</strong>: 해당 에너지 흐름의 크기 (상대값)</li>
                     </ul>
 
                     <p><strong>에너지 흐름:</strong></p>
                     <ul>
-                        <li><strong>왼쪽</strong>: 지표 → 대기 → 우주 (지표 복사, 주황색)</li>
-                        <li><strong>중앙</strong>: 태양 → 지구 (태양 입사, 노란색)</li>
-                        <li><strong>오른쪽</strong>: 대기 → 지표/우주 (대기 방출, 빨간색)</li>
+                        <li><strong>왼쪽</strong>: 지표 지구 복사 → 대기 → 우주 (주황색)</li>
+                        <li><strong>중앙</strong>: 태양 복사 → 지구 (노란색)</li>
+                        <li><strong>오른쪽</strong>: 대기 지구 복사 재방출 → 지표/우주 (빨간색)</li>
                     </ul>
 
                     <p><strong>각 영역의 에너지 표시:</strong></p>
                     <ul>
                         <li><strong>우주로 방출</strong>: 지구 시스템에서 최종적으로 우주로 나가는 총 에너지</li>
-                        <li><strong>대기 흡수</strong>: 대기가 지표 복사로부터 흡수한 에너지</li>
+                        <li><strong>대기 흡수</strong>: 대기가 지표의 지구 복사로부터 흡수한 에너지</li>
                         <li><strong>↑ 우주 / ↓ 지표</strong>: 대기가 위(우주)와 아래(지표)로 방출하는 에너지</li>
-                        <li><strong>지표 총 에너지</strong>: 지표가 받는 총 에너지 (태양 직접 + 대기 재방출)</li>
+                        <li><strong>지구 복사 에너지지</strong>: 지표가 받는 총 에너지 (태양 복사 직접 흡수 + 대기 재방출)</li>
                     </ul>
                 </div>
 
@@ -464,14 +464,14 @@
                     <h3>🔬 에너지 수치 패널</h3>
                     <p>오른쪽 패널에서 각 에너지 흐름의 정확한 수치를 확인할 수 있습니다:</p>
                     <ul>
-                        <li><strong>태양 입사</strong>: 지구에 도달하는 총 태양 에너지</li>
-                        <li><strong>반사</strong>: 우주로 반사되어 나가는 에너지</li>
-                        <li><strong>지표 흡수 (태양)</strong>: 지표가 태양으로부터 직접 흡수하는 에너지</li>
-                        <li><strong>대기 흡수 (지표)</strong>: 대기가 지표 복사로부터 흡수하는 에너지</li>
-                        <li><strong>대기 → 지표</strong>: 대기가 지표로 재방출하는 에너지 (온실효과)</li>
-                        <li><strong>대기 → 우주</strong>: 대기가 우주로 방출하는 에너지</li>
-                        <li><strong>지표 → 우주 직접</strong>: 대기를 통과하지만 흡수되지 않고 우주로 나가는 에너지</li>
-                        <li><strong>지표 총 에너지</strong>: 지표가 받는 총 에너지 (지표 온도와 관련)</li>
+                        <li><strong>태양 복사 에너지 입사</strong>: 지구에 도달하는 총 태양 복사 에너지</li>
+                        <li><strong>반사 (알베도)</strong>: 우주로 반사되어 나가는 태양 복사 에너지</li>
+                        <li><strong>지표 흡수 (태양 복사)</strong>: 지표가 태양 복사로부터 직접 흡수하는 에너지</li>
+                        <li><strong>대기 흡수 (지구 복사)</strong>: 대기가 지표의 지구 복사로부터 흡수하는 에너지</li>
+                        <li><strong>대기 → 지표 (재방출)</strong>: 대기가 지표로 재방출하는 에너지 (온실효과)</li>
+                        <li><strong>대기 → 우주 (재방출)</strong>: 대기가 우주로 방출하는 에너지</li>
+                        <li><strong>지구 복사 에너지</strong>: 지표가 받는 총 에너지 (단위: W/m², 지표 온도와 관련)</li>
+                        <li><strong>우주로 방출 (총)</strong>: 지구 시스템에서 최종적으로 우주로 나가는 총 에너지</li>
                     </ul>
                 </div>
 
@@ -479,7 +479,7 @@
                     <h3>💡 학습 팁</h3>
                     <ul>
                         <li><strong>온실효과 관찰</strong>: 대기 두께를 0%에서 100%로 변화시키며 지표 총 에너지가 어떻게 증가하는지 확인하세요</li>
-                        <li><strong>에너지 평형 이해</strong>: "태양 입사 - 반사 = 우주로 방출"이 항상 성립함을 확인하세요</li>
+                        <li><strong>에너지 평형 이해</strong>: "태양 복사 입사 - 반사 = 우주로 방출"이 항상 성립함을 확인하세요</li>
                         <li><strong>반사도 효과</strong>: 반사도를 높이면 지표 에너지가 감소하는 것을 관찰하세요 (빙하-알베도 되먹임)</li>
                         <li><strong>행성 비교</strong>: 지구형, 화성형, 금성형을 비교하며 각 행성의 조건 차이를 이해하세요</li>
                         <li><strong>극단 실험</strong>: 극단적인 값들을 설정해보며 각 변수의 역할을 명확히 파악하세요</li>
@@ -490,10 +490,17 @@
                     <h3>🌡️ 과학적 배경</h3>
                     
                     <p><strong>온실효과란?</strong></p>
-                    <p>대기가 지표에서 방출된 적외선을 흡수하고 다시 지표로 재방출하는 현상입니다. 이로 인해 지표의 온도가 대기가 없을 때보다 높아집니다.</p>
+                    <p>대기가 지표에서 방출된 지구 복사(적외선)를 흡수하고 다시 지표로 재방출하는 현상입니다. 이로 인해 지표의 온도가 대기가 없을 때보다 높아집니다.</p>
                     
                     <p><strong>에너지 평형:</strong></p>
-                    <p>평형 상태에서는 지구가 받는 에너지(태양 입사 - 반사)와 내보내는 에너지(우주로 방출)가 같습니다. 만약 균형이 깨지면 지구의 온도가 변합니다.</p>
+                    <p>평형 상태에서는 지구가 받는 에너지(태양 복사 입사 - 반사)와 내보내는 에너지(우주로 방출)가 같습니다. 만약 균형이 깨지면 지구의 온도가 변합니다.</p>
+                    
+                    <p><strong>태양 복사와 지구 복사:</strong></p>
+                    <ul>
+                        <li><strong>태양 복사</strong>: 주로 가시광선과 자외선 영역의 단파 복사 (고온의 태양에서 방출)</li>
+                        <li><strong>지구 복사</strong>: 적외선 영역의 장파 복사 (상대적으로 저온인 지표와 대기에서 방출)</li>
+                        <li>대기는 태양 복사는 대부분 통과시키지만, 지구 복사는 많이 흡수합니다 (온실효과)</li>
+                    </ul>
                     
                     <p><strong>실제 지구:</strong></p>
                     <ul>
@@ -508,16 +515,19 @@
                     <h3>❓ FAQ</h3>
                     
                     <p><strong>Q: 대기가 두꺼워지면 왜 지표 에너지가 증가하나요?</strong></p>
-                    <p>A: 대기가 지표 복사를 흡수한 후 절반을 다시 지표로 되돌려 보내기 때문입니다. 이것이 온실효과의 핵심입니다.</p>
+                    <p>A: 대기가 지표의 지구 복사를 흡수한 후 절반을 다시 지표로 되돌려 보내기 때문입니다. 이것이 온실효과의 핵심입니다.</p>
                     
                     <p><strong>Q: 금성형에서 왜 지표 에너지가 지구보다 높나요?</strong></p>
-                    <p>A: 금성은 매우 두꺼운 대기(98%)로 인한 극심한 온실효과 때문에 지표 온도가 460°C에 달합니다.</p>
+                    <p>A: 금성은 매우 두꺼운 대기로 인한(지구의 약 90배) 극심한 온실효과 때문에 지표 온도가 460°C에 달합니다.</p>
                     
                     <p><strong>Q: 에너지 수치의 단위는 무엇인가요?</strong></p>
                     <p>A: 상대값으로 표시됩니다. 100을 기준으로 비율을 나타내며, 실제로는 W/m² 단위를 사용합니다.</p>
                     
+                    <p><strong>Q: 태양 복사와 지구 복사의 차이는 무엇인가요?</strong></p>
+                    <p>A: 태양 복사는 고온의 태양에서 나오는 단파 복사이고, 지구 복사는 상대적으로 저온인 지표와 대기에서 나오는 장파 복사입니다. 대기는 태양 복사는 잘 통과시키지만 지구 복사는 많이 흡수합니다.</p>
+                    
                     <p><strong>Q: 왜 주황색과 빨간색을 구분했나요?</strong></p>
-                    <p>A: 지표에서 직접 나오는 복사(주황색)와 대기에서 재방출되는 복사(빨간색)를 시각적으로 구분하기 위함입니다.</p>
+                    <p>A: 지표에서 직접 나오는 지구 복사(주황색)와 대기에서 재방출되는 지구 복사(빨간색)를 시각적으로 구분하기 위함입니다.</p>
                 </div>
 
                 <div class="help-section">
@@ -534,6 +544,7 @@
             </div>
         </div>
     </div>
+</body>
 
     <script>
         // 전역 변수로 선언
@@ -627,7 +638,7 @@
             document.getElementById('atmAbsorbed').textContent = atmAbsorbed.toFixed(1);
             document.getElementById('atmToSurface').textContent = atmToSurface.toFixed(1);
             document.getElementById('atmToSpace').textContent = atmToSpace.toFixed(1);
-            document.getElementById('surfaceTotal').textContent = surfaceTotal.toFixed(1);
+            document.getElementById('surfaceTotal').textContent = surfaceTotal.toFixed(1) + ' W/m²';
             document.getElementById('toSpace').textContent = toSpace.toFixed(1);
 
             return {
